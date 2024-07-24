@@ -16,6 +16,11 @@ const AppRoutes = [
         name: 'useradd',
         component: () => import('../views/useradd/index.vue')
     },
+    {
+        path: EnumRoutePaths.EDIT_USER_VIEW_PATH,
+        name: 'useredit',
+        component: () => import('../views/useredit/index.vue')
+    },
     { 
         path: "/:pathMatch(.*)*", 
         component: () => import('../views/NotFound.vue')

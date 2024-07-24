@@ -28,10 +28,10 @@
 import { ref, onBeforeMount } from 'vue';
 import { Notify } from 'quasar';
 import { useRouter } from 'vue-router';
-import axiosInstance from '../../api/axios'
+import axiosInstance from '../../api/axios';
 
-import { userAddInputs } from './UserAddInputs'
-import { DynamicInput } from '../../components/index'
+import { userAddInputs } from './UserAddInputs';
+import { DynamicInput } from '../../components/index';
 
 import { store, userAdd } from '../../stores/index';
 

@@ -10,6 +10,8 @@
     <div>
       <q-btn @click="logoutUser">Logout</q-btn>
     </div>
+
+    <listusers></listusers>
   </div>
 </template>
 
@@ -18,6 +20,8 @@ import { userData } from '../../stores/index';
 import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { store } from '../../stores/index';
+
+import listusers from './listusers.vue';
 
 const router = useRouter();
 

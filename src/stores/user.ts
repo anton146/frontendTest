@@ -5,6 +5,7 @@ import type { UserModel } from '../api/interfaces'
 export const useUserStore = defineStore('user', () => {
     const objectStore = ref();
     const initState = ref<UserModel>({
+        "id" : "",
         "name": "",
         "mail": "",
         "password": "",
@@ -13,6 +14,8 @@ export const useUserStore = defineStore('user', () => {
         "name": "",
         "password": ""
     });
+    const users = ref<UserModel[]>();
+    const userEdit = ref<UserModel>();
     const userData = ref({...initState.value});
     const user = ref({...initLoginState.value});
     const userAdd = ref({...initState.value});
@@ -37,8 +40,16 @@ export const useUserStore = defineStore('user', () => {
         userData.value = data;
     }
 
+    function setUsers(data: any){
+        users.value = data;
+    }
+
+    function setUserEdit(data: any){
+        userEdit.value = data;
+    }
+
     return { 
-        user, userAdd, userData, objectStore,
-        resetUser, resetUserAdd, setUserData, resetUserData, resetUserPassConfim
+        users, user, userEdit, userAdd, userData, objectStore,
+        resetUser, resetUserAdd, setUserData, resetUserData, resetUserPassConfim, setUsers, setUserEdit
     }
 })

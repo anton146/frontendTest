@@ -2,11 +2,11 @@ import type {GenInputType} from "../../utils/types/GenInputType";
 
 const loginInputs: GenInputType[] = [
     {
-        label: "Username",
+        label: "Name",
         inputType: "text",
         modelKey: "username",
         rules: [
-            (val: any) => !!val || "Username is required",
+            (val: any) => !!val || "Name is required",
             (val: any) =>  val.length > 0 || "Please use minimum 0 character",
             (val: any) =>  val.length < 15 || "Please use maximum 15 character",
         ],
